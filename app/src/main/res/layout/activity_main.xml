@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    tools:context=".ui.home.MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_home" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listviewCampaigns"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+<!--    >-->
+<!--    <ListView-->
+<!--        android:id="@+id/listviewCampaigns"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+
+<!--        ></ListView>-->
+
+
+</RelativeLayout>

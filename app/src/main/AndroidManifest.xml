@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.giangnth.rifiunitedkotlin">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -10,6 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.setting.SettingActivity"></activity>
+        <activity android:name=".connect_wallet.ConnectWalletActivity" />
+        <activity android:name=".ui.league.LeagueActivity" />
+        <activity android:name=".ui.match.MatchActivity" />
+        <activity android:name=".ui.squad.SquadActivity" />
+        <activity android:name=".ui.redeem.RedeemActivity" />
+        <activity android:name=".ui.ranking.RankingActivity" />
         <activity android:name=".ui.home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

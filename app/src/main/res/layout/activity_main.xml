@@ -2,29 +2,129 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/relativeLayout"
     tools:context=".ui.home.MainActivity">
+
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:id="@+id/imageView"
         android:scaleType="centerCrop"
         android:src="@drawable/background_home" />
+
+    <RelativeLayout
+        android:id="@+id/settingButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickSetting"
+        >
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:src="@drawable/backgound_avartar"
+            android:layout_alignParentLeft="true"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GiangNTH"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoWalletAddress"
+            >
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/shape_info_wallet"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0x37e..."
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/walletCoins"
+            android:layout_marginLeft="8dp"
+            >
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/shape_info_wallet"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$900.000"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listviewCampaigns"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         />
-<!--    >-->
-<!--    <ListView-->
-<!--        android:id="@+id/listviewCampaigns"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-
-<!--        ></ListView>-->
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/listBottomButton"
+        android:layout_width="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_button_bar"
+        android:elevation="1dp"
+        />
 </RelativeLayout>
